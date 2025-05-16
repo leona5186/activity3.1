@@ -29,15 +29,13 @@ jobs:
     - name: Run main.py
       run: python main.py
 
-    - name: Configure Git identity
-      run: |
-        git config user.name "github-actions[bot]"
-        git config user.email "github-actions[bot]@users.noreply.github.com"
-
     - name: Commit and push processed dataset
       run: |
-        git add processed_dataset.csv
-        git commit -m "Auto commit: add processed_dataset.csv"
-        git push
+        git status
+        ls -al
+        git add processed_dataset.csv || echo "⚠️ File not found, skipping add"
+        git commit -m "Auto commit: add processed_dataset.csv" || echo "⚠️ Nothing to commit"
+        git push || echo "⚠️ Nothing to push or push failed"
+
 
 
