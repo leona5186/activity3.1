@@ -7,10 +7,10 @@ df = pd.read_csv('data/raw_dataset.csv')
 df_clean = df.drop_duplicates()
 
 # Save cleaned dataset
-df_cleaned.to_csv("processed_dataset.csv", index=False)
-
+df_clean.to_csv('data/processed_dataset.csv', index=False)
 
 print("Duplicates removed successfully.")
 
-#trigger CI/CD workflow
+# This is a trigger for GitHub Actions
+# trigger CI/CD workflow
 
