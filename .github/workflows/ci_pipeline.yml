@@ -26,8 +26,9 @@ jobs:
       run: python main.py
 
     - name: Upload processed dataset
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v2
       with:
         name: processed-dataset
         path: data/processed_dataset.csv
+
 
