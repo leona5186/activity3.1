@@ -5,6 +5,7 @@ on:
     paths:
       - '**.py'
       - 'data/**.csv'
+      - '.github/workflows/**'
 
 permissions:
   contents: write
