@@ -10,3 +10,6 @@ df_clean = df.drop_duplicates()
 df_clean.to_csv('data/processed_dataset.csv', index=False)
 
 print("Duplicates removed successfully.")
+
+# This is a trigger for GitHub Actions
+trigger CI/CD workflow
